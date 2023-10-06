@@ -1,13 +1,17 @@
-wget https://dl.google.com/go/go1.21.0.linux-amd64.tar.gz
-tar -zxvf go1.21.0.linux-amd64.tar.gz -C /usr/local
+package arsenal
 
-/etc/profile
+import (
+	"fmt"
+	"testing"
+)
 
-export GOROOT=/usr/local/go
-export PATH=$PATH:$GOROOT/bin
+func TestDemo(t *testing.T) {
+	fmt.Println("testing")
+}
 
-nano ~/.profile
-source ~/.profile
+func TestMain(m *testing.M) {
+	fmt.Println("TestWorld")
+}
 
-nano ~/.bashrc
-source ~/.bashrc
+go test -v  .\hello_test.go -test.run TestDemo
+go test -v  .\hello_test.go
