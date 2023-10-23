@@ -15,3 +15,5 @@ func TestMain(m *testing.M) {
 
 go test -v  .\hello_test.go -test.run TestDemo
 go test -v  .\hello_test.go
+
+sudo vim /etc/gdm3/custom.conf   ban Wayland
